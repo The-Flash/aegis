@@ -39,11 +39,19 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(catch2)
 
-add_library(aegis_lib STATIC src/aegis/application/application.cpp)
+add_library(
+    aegis_lib 
+    STATIC 
+    src/aegis/application/application.cpp
+    src/aegis/logging/logging.cpp
+)
 # where to find the header files for aegis_lib
 target_include_directories(aegis_lib PUBLIC src)
 
-add_executable(aegis src/main.cpp)
+add_executable(
+    aegis 
+    src/main.cpp
+)
 
 # Link aegis_lib to aegis executable
 target_link_libraries(aegis PRIVATE aegis_lib)
