@@ -44,6 +44,7 @@ add_library(
     STATIC 
     src/aegis/application/application.cpp
     src/aegis/logging/logging.cpp
+    src/aegis/config/config.cpp
 )
 # where to find the header files for aegis_lib
 target_include_directories(aegis_lib PUBLIC src)
